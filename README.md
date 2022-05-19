@@ -9,15 +9,28 @@ This project is simple Lorem ipsum dolor generator.
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* Python
+* Tensorflow
+* Keras
+* Pandas
+* Numpy
+* pytesseract
+* OpenCV
 	
 ## Setup
-To run this project, install it locally using npm:
+To preprocess the data, train and evaluate the models, you can do so all within the project_notebook.ipynb
+
+Testing can be done within the web application inside the web_app directory.
+Running the web application should be done like so:
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+$ cd ./web_app
+$ python app.py
 ```
+
+Alternatively, you can run a simpler version within the rest_api directory like so:
+```
+$ cd ./rest_api
+$ python app.py
+```
+This way, you can send a post request with the images and the output will be the predicted coordinates for that specific location.
