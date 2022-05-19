@@ -34,3 +34,5 @@ $ cd ./rest_api
 $ python app.py
 ```
 This way, you can send a post request with the images and the output will be the predicted coordinates for that specific location.
+
+NOTE: the models should be extracted first since they are in .zip files which contain the actual model files, .h5
