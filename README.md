@@ -1,4 +1,4 @@
-# geoguessr_bot
+# GeoGuessr Bot
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
