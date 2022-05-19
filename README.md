@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This project is a simple AI used to make coordinate predictions from the input images originating from Croatia.
 	
 ## Technologies
 Project is created with:
