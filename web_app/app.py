@@ -147,7 +147,7 @@ def calculate_predicted_coordinates(weights, group_reference, n = 4, street_view
 #loading our trained model
 def load_custom_model():
     global model
-    model = [load_model("./45_model.h5"), load_model("./45_model.h5"), load_model("./45_model.h5")]
+    model = [load_model("../models/B0_final-05-0.40.h5"), load_model("../models/B2-final-07-0.41.h5"), load_model("../models/MbNet_final_0.36.h5")]
     print(model)
 
 def prepare_image(image, target):
@@ -194,7 +194,7 @@ def predict():
             img.close()
             image = imread(io.BytesIO(image))
 
-            image = [prepare_image(image, target=(260, 260)), prepare_image(image, target=(260, 260)), prepare_image(image, target=(260, 260))]
+            image = [prepare_image(image, target=(224, 224)), prepare_image(image, target=(260, 260)), prepare_image(image, target=(224, 224))]
             preds = [m.predict(i)for m, i in zip(model, image)]
             y_preds = np.array(preds)
             summed = np.sum(y_preds, axis = 0) / 3
