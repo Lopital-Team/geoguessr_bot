@@ -13,6 +13,9 @@ def make_html(longitude=None, latitude=None, longitude_true=None, latitude_true=
     pred_map.save()
     
 class Visualizer():
+    '''
+    Defines map and map elements such as points, grids and connecting lines.
+    '''
     def __init__(self,true_loc = None,pred_loc = None,zones = None):
         self.map_ = folium.Map(location = [44.65,16.06], zoom_start = 7)
         self.zones = zones
@@ -84,5 +87,6 @@ class Visualizer():
         return geo_json
     def save(self):
         return self.map_.save("./templates/new.html")
+    
 
         
